@@ -19,12 +19,19 @@
     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Donate animals: PetMe</title>
+    <style>
+      .donate-section form .relative:has(input:required) label::after {
+        content: '*';
+        color: red;
+        margin-left: 0.2rem;
+      }
+    </style>
   </head>
 
 <body>
   <header id="header"
     class=" text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center lg:justify-around">
-    <div class="flex flex-row items-center md:flex-row md:items-center p-5" id="logo">
+    <div class="flex flex-row items-center md:flex-row md:items-center p-2" id="logo">
       <span class="mission-1 mission-dark"> Saving Lives </span>
       <a class="logo-border" href="index.html">
         <img class="rounded-full logo-size" src="./Assets/Images/logo.jpg" alt="logo" />
@@ -117,7 +124,7 @@
   </header>
 
   <section class="text-gray-600 body-font relative bg-[url('Assets/Images/pet-don.jpg')] bg-center bg-no-repeat
-        bg-cover">
+        bg-cover donate-section">
     <div class="container px-5 py-24 mx-auto card backdrop-blur-sm">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
